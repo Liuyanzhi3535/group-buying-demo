@@ -1,0 +1,20 @@
+.viewer-nav {
+  position: sticky;
+  top: 0;
+}
+
+.viewer-nav-content {
+  width: 240px;
+  height: 100vh;
+  overflow: auto;
+  border-right: 1px solid rgba(0,0,0,.12);
+}
+
+.viewer-nav .viewer-nav-content::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+
+.viewer-nav-content::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,.26);
+}
