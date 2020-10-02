@@ -1,0 +1,12 @@
+<div class="category-list">
+  <div *ngFor="let merchant of merchants" class="category-list-item">
+    <app-merchant-item
+      [merchant]="merchant"
+      (editItem)="openEditModal('edit', $event)"
+      (deleteItem)="deleteMerchant($event)"
+    ></app-merchant-item>
+  </div>
+  <div class="category-list-item add-button" (click)="openEditModal('create')">
+    <p>＋ 新增店家</p>
+  </div>
+</div>

@@ -1,3 +1,4 @@
+import { MerchantModule } from './merchant/merchant.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -13,6 +14,7 @@ import { LayoutModule } from './layout';
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
+    MerchantModule
   ],
   providers: [],
   bootstrap: [AppComponent],
