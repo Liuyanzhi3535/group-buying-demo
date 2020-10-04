@@ -1,1 +1,81 @@
-<p>merchant-edit works!</p>
+<h1 mat-dialog-title>店家資訊</h1>
+<div mat-dialog-content>
+  <form #merchantForm="ngForm">
+    <div>
+      <mat-form-field>
+        <mat-label>店名</mat-label>
+        <input
+          matInput
+          required
+          [(ngModel)]="merchant.name"
+          name="name"
+          #name="ngModel"
+        />
+        <mat-error *ngIf="name.invalid">{{ "此欄位必填" }}</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label>地址</mat-label>
+        <input
+          matInput
+          required
+          [(ngModel)]="merchant.adress"
+          name="adress"
+          #adress="ngModel"
+        />
+        <mat-error *ngIf="adress.invalid">{{ "此欄位必填" }}</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label>電話</mat-label>
+        <input
+          matInput
+          required
+          [(ngModel)]="merchant.phone"
+          name="phone"
+          #phone="ngModel"
+        />
+        <mat-error *ngIf="phone.invalid">{{ "此欄位必填" }}</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label>網站</mat-label>
+        <input
+          matInput
+          required
+          [(ngModel)]="merchant.website"
+          name="website"
+          #website="ngModel"
+        />
+        <mat-error *ngIf="website.invalid">{{ "此欄位必填" }}</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label>圖片</mat-label>
+        <input
+          matInput
+          required
+          [(ngModel)]="merchant.logo"
+          name="logo"
+          #logo="ngModel"
+        />
+        <mat-error *ngIf="logo.invalid">{{ "此欄位必填" }}</mat-error>
+      </mat-form-field>
+    </div>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">取消</button>
+  <button
+    [disabled]="!merchantForm.valid"
+    mat-raised-button
+    color="primary"
+    [mat-dialog-close]="merchant"
+  >
+    儲存
+  </button>
+</div>
