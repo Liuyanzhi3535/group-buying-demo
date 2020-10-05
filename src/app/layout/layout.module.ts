@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { SharedModule } from '../shared/shared.module';
@@ -15,7 +16,7 @@ import { LayoutComponent } from './containers/layout/layout.component';
     SidenavComponent,
     FooterComponent,
   ],
-  imports: [SharedModule],
+  imports: [SharedModule, RouterModule],
   exports: [LayoutComponent, NavComponent],
 })
 export class LayoutModule {}

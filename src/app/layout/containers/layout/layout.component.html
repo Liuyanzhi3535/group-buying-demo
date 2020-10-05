@@ -1,8 +1,11 @@
 <div class="sidenav-inner-content">
-  <app-header [headText]="'測試標頭'"></app-header>
+  <app-header [headText]="moduleName"></app-header>
   <main class="sidenav-body-content">
     <app-sidenav></app-sidenav>
-    <ng-content></ng-content>
+    <router-outlet
+      #routerOutlet="outlet"
+      (activate)="setModuleName(routerOutlet)"
+    ></router-outlet>
   </main>
   <app-footer></app-footer>
 </div>

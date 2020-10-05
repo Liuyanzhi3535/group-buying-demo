@@ -13,6 +13,6 @@ import { MerchantEditComponent } from './components/merchant-edit/merchant-edit.
     MerchantEditComponent,
   ],
   imports: [MerchantRoutingModule, SharedModule],
-  exports: [MerchantListComponent],
+  exports: [],
 })
 export class MerchantModule {}

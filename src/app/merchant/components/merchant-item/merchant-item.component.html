@@ -30,6 +30,7 @@
   <mat-card-actions>
     <a
       mat-stroked-button
+      [routerLink]="['..', 'product', merchant.id]"
       (click)="$event.stopPropagation()"
     >
       管理菜單
