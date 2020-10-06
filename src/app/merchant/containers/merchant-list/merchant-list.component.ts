@@ -21,6 +21,7 @@ export class MerchantListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.merchantsService.fetchMerchant();
     this.merchants$ = this.merchantsService.getMerchants();
   }
 
